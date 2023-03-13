@@ -1,0 +1,9 @@
+name: dco
+on:
+  merge_group:
+
+jobs:
+  dco:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "The name of your branch is ${{ github.ref }} and your event ${{ github.actor}} is ${{ github.org }}."
