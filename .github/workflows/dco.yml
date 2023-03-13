@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
-      - run: echo "The name of your branch is ${{ github.ref }} and your event ${{ github.actor}} is ${{ github.org }}."
+      - run: echo "This DCO job runs on pull_request and workflow_dispatch"
       - name: Get PR Commits
         id: 'get-pr-commits'
         uses: tim-actions/get-pr-commits@v1.2.0
