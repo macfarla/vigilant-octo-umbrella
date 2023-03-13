@@ -6,4 +6,4 @@ jobs:
   dco:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "This DCO job runs on merge_queue event"
+      - run: echo "This DCO job runs on merge_queue event trigger and stuff"
