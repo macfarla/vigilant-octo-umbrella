@@ -11,3 +11,4 @@ jobs:
               with:
                 repo-token: ${{ secrets.GITHUB_TOKEN }}
                 message: "Hello, It's my first comment with Github action !"
+                myInput: 1
