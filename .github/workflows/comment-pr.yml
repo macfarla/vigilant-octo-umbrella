@@ -9,6 +9,6 @@ jobs:
             - name: Comment on a pull_request
               uses: github-actions-up-and-running/pr-comment@v1.0.0
               with:
+                myInput: 1
                 repo-token: ${{ secrets.GITHUB_TOKEN }}
                 message: "Hello, It's my first comment with Github action !"
-                myInput: 1
