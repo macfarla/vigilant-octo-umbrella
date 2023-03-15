@@ -1,10 +1,6 @@
 name: "Fancy PR Commenter"
 on:
-  pull_request_target:
-
-permissions:
-  contents: read
-  pull-requests: write
+  - pull_request_target
 
 jobs:
   name: Comment with template. matches .md files
