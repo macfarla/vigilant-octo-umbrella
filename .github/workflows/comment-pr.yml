@@ -6,12 +6,10 @@ permissions:
   pull-requests: write
 
 jobs:
-    build:
+    triage:
         name: Comment a pull_request
         runs-on: ubuntu-latest
         steps:
-            - name: Comment on a pull_request
-            - uses: exercism/pr-commenter-action@v1.4.0
-              with:
-                github-token: "${{ secrets.GITHUB_TOKEN }}"
-                config-file: ".github/pr-commenter.yml"
+        - uses: actions/labeler@v4
+          with:
+            repo-token: "${{ secrets.GITHUB_TOKEN }}"
