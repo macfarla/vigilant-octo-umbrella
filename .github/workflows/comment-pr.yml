@@ -1,13 +1,10 @@
-name: comment on pr
+name: comment on pr with checklist
 
 on:
   # Trigger the workflow on push or pull request
   pull_request_target:
-    types:
-      - opened
     branches:
       - main
-      - 'release/**'
 
 jobs:
   comment:
