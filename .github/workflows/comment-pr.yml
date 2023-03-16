@@ -3,9 +3,11 @@ name: comment on pr
 on:
   # Trigger the workflow on push or pull request
   pull_request_target:
+    types:
+      - opened
     branches:
       - main
-      - develop
+      - 'release/**'
 
 jobs:
   comment:
@@ -19,5 +21,6 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '- [ ] Thanks for reporting!\n- [ ] checklist item'
+              body: '- [ ] I thought about documentation and added the `doc-change-required` label to this PR if
+    [updates are required](https://wiki.hyperledger.org/display/BESU/Documentation).\n- [ ] I have considered running `./gradlew acceptanceTestNonMainnet` locally if my PR affects non-mainnet modules.\n- [ ] I thought about the changelog and included a [changelog update if required](https://wiki.hyperledger.org/display/BESU/Changelog).'
             })
